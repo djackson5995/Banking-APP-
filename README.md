@@ -1,61 +1,76 @@
-Banking Application
-Overview
-This is a Python-based console application that simulates basic banking operations. It allows users to manage multiple accounts, deposit and withdraw money, transfer funds, change PINs, and apply interest to accounts. This application is designed to provide a simple and secure way to handle banking transactions.
+# Banking Application
+This is a simple Python program that simulates a banking system, allowing users to manage their accounts, perform transactions, and apply interest.
 
-Features
-Account Management: Open new accounts, close existing accounts, and manage account details.
-Deposit and Withdrawal: Deposit money into accounts and withdraw money using account numbers or PINs.
-Fund Transfers: Transfer money between different accounts within the bank.
-PIN Management: Change account PINs securely.
-Interest Application: Apply monthly interest to all accounts based on an annual rate.
-ATM Withdrawals: Simulate ATM-style cash withdrawals with specific denominations.
-Change Deposit: Deposit coins by counting pennies, nickels, dimes, and quarters.
-Data Security: Secure account information using random account numbers and PINs.
+## How It Works
+The program provides a console-based interface and prompts the user to:
 
-Installation
-Clone the Repository: Download or clone the repository to your local machine.
+1. Open a New Account: Enter personal details to create a new bank account.
+2. Deposit Money: Enter the amount to deposit into an account.
+3. Withdraw Money: Enter the amount to withdraw from an account, ensuring sufficient funds are available.
+4. Transfer Money: Transfer funds between two accounts within the bank.
+5. Change Account PIN: Update the PIN associated with an account for security purposes.
+6. Apply Interest: Apply a specified annual interest rate to all accounts, compounded monthly.
+7. ATM Withdrawals: Perform cash withdrawals with specific denominations.
+8. Deposit Change: Deposit various coins (pennies, nickels, dimes, quarters) into an account.
+9. Close an Account: Remove an account from the bank’s records.
+   
+It calculates:
 
-bash
+- Account balances after deposits, withdrawals, and transfers.
+- Interest application based on the provided annual rate.
+- New account details after changing the PIN or closing an account.
+- Example Usage
+```plaintext
 Copy code
-git clone <repository-url>
-Navigate to the Directory: Open the terminal or command prompt and navigate to the project directory.
+Welcome to the Banking Application
 
-bash
-Copy code
-cd banking-app
-Run the Application: Execute the main Python script to start the banking application.
+Main Menu
+1: Open a New Account
+2: Display Account Information
+3: Change Account PIN
+4: Deposit Money
+5: Transfer Money Between Accounts
+6: Withdraw Money
+7: ATM Withdrawal
+8: Close an Account
+9: Apply Monthly Interest to All Accounts
+10: Deposit Change
+0: Exit
 
-bash
-Copy code
-python bank_manager.py
-Usage
-Once the application starts, you will see a menu with various options. Simply enter the corresponding number for the action you wish to perform:
+Choose an option: 1
 
-Open a New Account: Create a new account by providing your details.
-Display Account Information: View details of an existing account.
-Change Account PIN: Update the security PIN for your account.
-Deposit Money: Add funds to an account.
-Transfer Money Between Accounts: Move funds from one account to another.
-Withdraw Money: Take money out of an account.
-ATM Withdrawal: Withdraw money in specific denominations.
-Close an Account: Remove an account from the bank's records.
-Apply Monthly Interest to All Accounts: Increase account balances based on a provided annual interest rate.
-Deposit Change: Deposit coins into an account by specifying quantities of pennies, nickels, dimes, and quarters.
-Exit: Exit the application.
-Examples
-Opening a New Account
-Choose option 1 from the menu.
-Enter the first name, last name, and SSN (Social Security Number).
-An account is created with a random account number and PIN.
+--- Open a New Account ---
+Enter the first name: John
+Enter the last name: Doe
+Enter the SSN (9 digits): 123456789
+Account created successfully.
+Account Number: 1234567890
+Owner: John Doe
+SSN: XXX-XX-6789
+PIN: 4321
+Balance: $0.00
 Depositing Money
-Choose option 4 from the menu.
-Enter your PIN to authenticate.
-Enter the amount to deposit.
+plaintext
+Copy code
+Main Menu
+Choose an option: 4
+
+Enter your 4-digit PIN: 4321
+Enter the amount to deposit ($): 100
+Deposited $100.00 successfully.
+New Balance: $100.00
 Transferring Money Between Accounts
-Choose option 5 from the menu.
-Enter the account numbers for both the source and destination accounts.
-Enter the transfer amount.
-Code Structure
-Account Class: Represents individual bank accounts, including methods for deposits, withdrawals, PIN changes, and applying interest.
-Bank Class: Represents the bank, holding multiple accounts and providing methods for adding, finding, and removing accounts.
-BankManager Class: Provides a console-based interface for interacting with the bank and managing operations.
+plaintext
+Copy code
+Main Menu
+Choose an option: 5
+
+--- Transfer Money Between Accounts ---
+From Account:
+Enter the account number: 1234567890
+To Account:
+Enter the account number: 0987654321
+Enter the amount to transfer ($): 50
+Transferred $50.00 successfully.
+New Balance in From Account: $50.00
+New Balance in To Account: $50.00
