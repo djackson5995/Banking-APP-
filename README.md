@@ -73,4 +73,4 @@ Enter the account number: 0987654321
 Enter the amount to transfer ($): 50
 Transferred $50.00 successfully.
 New Balance in From Account: $50.00
-New Balance in To Account: $50.00
+New Balance in To Account: $50.00 
